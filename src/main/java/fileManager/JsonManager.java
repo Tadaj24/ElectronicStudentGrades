@@ -21,6 +21,7 @@ import java.util.stream.Collectors;
 public class JsonManager {
     public static void main(String[] args) {
         GradeSystem gradeSystem = load();
+        save(gradeSystem);
     }
 
     public static GradeSystem load() {
@@ -29,8 +30,8 @@ public class JsonManager {
         List<StudentImpl> students = loadStudents();
         List<TeacherImpl> teachers = loadTeachers();
 
-        Logger.logErrorMessage("Loading grade system failed. Please, try again.");
-        return null;
+        Logger.logMessage("Preparing system end successfully.");
+        return new GradeSystem(students, teachers);
     }
 
     private static List<StudentImpl> loadStudents() {
@@ -80,12 +81,20 @@ public class JsonManager {
     }
 
     public static void save(GradeSystem gradeSystem) {
-        serialize("GS_students.json",
-                gradeSystem.getStudentsList().stream().map(x -> (User) x).collect(Collectors.toList()),
-                new TypeToken<List<StudentImpl>>(){}.getType());
+        saveStudentsToJson(gradeSystem.getStudentsList());
+        saveTeachersToJson(gradeSystem.getTeachersList());
+    }
 
+    public static void saveStudentsToJson(List<StudentImpl> students){
+        serialize("GS_students.json",
+                students.stream().map(x -> (User) x).collect(Collectors.toList()),
+                new TypeToken<List<StudentImpl>>(){}.getType());
+    }
+
+
+    public static void saveTeachersToJson(List<TeacherImpl> teachers){
         serialize("GS_teachers.json",
-                gradeSystem.getTeachersList().stream().map(x -> (User) x).collect(Collectors.toList()),
+                teachers.stream().map(x -> (User) x).collect(Collectors.toList()),
                 new TypeToken<List<StudentImpl>>(){}.getType());
     }
 

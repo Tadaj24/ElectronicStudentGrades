@@ -29,6 +29,18 @@ public class Logger {
         System.out.println(message);
     }
 
+    public static void printMessage(MessageFactory message){
+        System.out.println(message);
+    }
+
+    public static void clearTerminal(){
+/*        try {
+            Runtime.getRuntime().exec("cls");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+    }
+
     public static void printErrorMessage(String message) {
         System.err.println(message);
     }

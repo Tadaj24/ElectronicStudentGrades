@@ -3,7 +3,7 @@ package gradeSystem.users;
 
 import java.util.Objects;
 
-public abstract class User {
+public abstract class User implements Comparable{
 
     protected String firstName;
 
@@ -41,6 +41,11 @@ public abstract class User {
 
     @Override
     public String toString() {
-        return String.format("%s %s, %s", firstName, lastName, userType);
+        return String.format("%s %s, %s", lastName, firstName, userType);
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return this.toString().compareTo(o.toString());
     }
 }
