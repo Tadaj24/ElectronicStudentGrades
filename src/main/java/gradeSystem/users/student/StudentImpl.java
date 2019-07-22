@@ -1,8 +1,8 @@
-package users.student;
+package gradeSystem.users.student;
 
-import subjects.Subject;
-import subjects.SubjectName;
-import users.User;
+import gradeSystem.subjects.Subject;
+import gradeSystem.subjects.SubjectName;
+import gradeSystem.users.User;
 
 import java.util.HashSet;
 

@@ -1,4 +1,4 @@
-package subjects.grades;
+package gradeSystem.subjects.grades;
 
 public enum GradeWeight {
     ONE(1),

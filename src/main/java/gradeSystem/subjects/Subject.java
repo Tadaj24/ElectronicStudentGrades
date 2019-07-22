@@ -1,6 +1,6 @@
-package subjects;
+package gradeSystem.subjects;
 
-import subjects.grades.Grade;
+import gradeSystem.subjects.grades.Grade;
 
 import java.util.ArrayList;
 import java.util.List;

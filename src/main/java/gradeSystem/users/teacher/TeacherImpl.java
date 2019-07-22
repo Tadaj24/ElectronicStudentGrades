@@ -1,9 +1,9 @@
-package users.teacher;
+package gradeSystem.users.teacher;
 
-import subjects.SubjectName;
-import subjects.grades.Grade;
-import users.User;
-import users.student.StudentImpl;
+import gradeSystem.subjects.SubjectName;
+import gradeSystem.subjects.grades.Grade;
+import gradeSystem.users.User;
+import gradeSystem.users.student.StudentImpl;
 
 public class TeacherImpl extends User implements Teacher {
     public TeacherImpl(String firstName, String secondName, String password) {

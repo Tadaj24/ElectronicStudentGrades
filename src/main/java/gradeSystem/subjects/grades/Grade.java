@@ -1,7 +1,6 @@
-package subjects.grades;
+package gradeSystem.subjects.grades;
 
 import lombok.*;
-import subjects.SubjectName;
 
 @EqualsAndHashCode
 @Getter(AccessLevel.PUBLIC)

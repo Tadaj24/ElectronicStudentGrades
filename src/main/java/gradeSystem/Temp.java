@@ -1,10 +1,11 @@
+package gradeSystem;
+
 import com.google.gson.Gson;
-import subjects.Subject;
-import subjects.SubjectName;
-import subjects.grades.Grade;
-import subjects.grades.GradeWeight;
-import users.student.Student;
-import users.student.StudentImpl;
+import gradeSystem.GradeSystem;
+import gradeSystem.subjects.Subject;
+import gradeSystem.subjects.SubjectName;
+import gradeSystem.subjects.grades.Grade;
+import gradeSystem.users.student.StudentImpl;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;

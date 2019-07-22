@@ -1,6 +1,6 @@
-package Logger;
+package utils;
 
-import fileManager.FileManager;
+import fileManager.ConfigManager;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -19,7 +19,7 @@ public class Logger {
     }
 
     private Logger() {
-        logFile = new File(String.format("%s\\logs_%s.log", FileManager.getLogsDirectory(), getCurrentTime()
+        logFile = new File(String.format("%s\\logs_%s.log", ConfigManager.getLogsDirectory(), getCurrentTime()
                 .replace("/", "")
                 .replace(":", "")
                 .replace(' ', '_')));

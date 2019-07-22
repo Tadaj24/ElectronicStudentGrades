@@ -11,7 +11,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-public class FileManager {
+public class ConfigManager {
     public static List<User> getAllUsersFromFile(){
         String path = getPathToJsonFile();
         return null;

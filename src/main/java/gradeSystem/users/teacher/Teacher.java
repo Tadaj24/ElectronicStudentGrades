@@ -1,8 +1,8 @@
-package users.teacher;
+package gradeSystem.users.teacher;
 
-import subjects.SubjectName;
-import subjects.grades.Grade;
-import users.student.StudentImpl;
+import gradeSystem.subjects.SubjectName;
+import gradeSystem.subjects.grades.Grade;
+import gradeSystem.users.student.StudentImpl;
 
 public interface Teacher {
     void printStudentGrades(StudentImpl student);

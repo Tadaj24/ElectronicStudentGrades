@@ -1,4 +1,4 @@
-package subjects;
+package gradeSystem.subjects;
 
 public enum SubjectName {
     Polish("Polski"),
