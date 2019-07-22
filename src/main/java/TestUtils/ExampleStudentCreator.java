@@ -1,6 +1,7 @@
 package gradeSystem;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import gradeSystem.GradeSystem;
 import gradeSystem.subjects.Subject;
 import gradeSystem.subjects.SubjectName;
@@ -18,28 +19,30 @@ public class Temp {
         Gson gson = new Gson();
         List<StudentImpl> students = new ArrayList<>();
 
-        students.add(createStrudent("Adam", "Be", "123"));
-        students.add(createStrudent("Adamek", "Beadsad", "123"));
-        students.add(createStrudent("Adamas", "Beed", "123"));
+        students.add(createStudent("Adam", "Be", "123"));
+        students.add(createStudent("Adamek", "Beadsad", "123"));
+        students.add(createStudent("Adamas", "Beed", "123"));
 
-        String json = gson.toJson(new GradeSystem());
+        Type listOfTestObject = new TypeToken<List<StudentImpl>>(){}.getType();
+        String json = gson.toJson(students);
         System.out.println(json);
 
-        List<StudentImpl> students1 = gson.fromJson(json, (Type) StudentImpl.class);
+        List<StudentImpl> students1 = gson.fromJson(json, listOfTestObject);
+        System.out.println();
     }
 
     public static List<StudentImpl> getSimpleStudents(){
         List<StudentImpl> students = new ArrayList<>();
 
-        students.add(createStrudent("Blazej", "R", "123"));
-        students.add(createStrudent("Wojtek", "S", "123"));
-        students.add(createStrudent("Kamil", "T", "123"));
+        students.add(createStudent("Blazej", "R", "123"));
+        students.add(createStudent("Wojtek", "S", "123"));
+        students.add(createStudent("Kamil", "T", "123"));
 
         return students;
     }
 
 
-    private static StudentImpl createStrudent(String firstName, String secondName, String password) {
+    private static StudentImpl createStudent(String firstName, String secondName, String password) {
         Random random = new Random();
         HashSet<Subject> list = new HashSet<>();
         for (SubjectName value : SubjectName.values()) {
