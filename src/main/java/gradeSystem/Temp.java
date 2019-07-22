@@ -21,20 +21,18 @@ public class Temp {
         students.add(createStrudent("Adamek", "Beadsad", "123"));
         students.add(createStrudent("Adamas", "Beed", "123"));
 
-        String json = gson.toJson(students);
+        String json = gson.toJson(new GradeSystem());
         System.out.println(json);
 
         List<StudentImpl> students1 = gson.fromJson(json, (Type) StudentImpl.class);
-
-
     }
 
     public static List<StudentImpl> getSimpleStudents(){
         List<StudentImpl> students = new ArrayList<>();
 
-        students.add(createStrudent("Adam", "Be", "123"));
-        students.add(createStrudent("Adamek", "Beadsad", "123"));
-        students.add(createStrudent("Adamas", "Beed", "123"));
+        students.add(createStrudent("Blazej", "R", "123"));
+        students.add(createStrudent("Wojtek", "S", "123"));
+        students.add(createStrudent("Kamil", "T", "123"));
 
         return students;
     }
@@ -46,7 +44,7 @@ public class Temp {
         for (SubjectName value : SubjectName.values()) {
             Grade[] grades = new Grade[3];
             for (int i = 0; i < 3; i++) {
-                grades[i] = new Grade(random.nextInt() % 6 + 1, random.nextInt() % 3 + 1);
+                grades[i] = new Grade(random.nextInt() % 5 + 1, random.nextInt() % 3 + 1);
             }
 
             list.add(new Subject(value, grades));
@@ -56,16 +54,3 @@ public class Temp {
         return student;
     }
 }
-/*
-
-    HashSet<Subject> lista = new HashSet<>();
-        lista.add(new Subject(SubjectName.History,
-                new Grade(1, GradeWeight.ONE),
-                new Grade(2, GradeWeight.TWO),
-                new Grade(3, GradeWeight.THREE)));
-                lista.add(new Subject(SubjectName.Matematic,
-                new Grade(11, GradeWeight.ONE),
-                new Grade(31, GradeWeight.THREE)));
-                lista.add(new Subject(SubjectName.Polish,
-                new Grade(2311, GradeWeight.THREE)));
-                StudentImpl student = new StudentImpl("Adam", "Kowalski", "123", lista);*/
