@@ -18,13 +18,18 @@ public class ReadFile {
     }
 
     private static String getPathToFile(){
+
+        return extractNodeContent("JSONFilePath");
+    }
+
+    private static String extractNodeContent(String nodeName){
         File fXmlFile = new File(System.getProperty("user.dir") + "/src/main/java/config.xml");
         String path = "";
         try {
             DocumentBuilder dBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
             Document doc = dBuilder.parse(fXmlFile);
 
-            path = doc.getDocumentElement().getElementsByTagName("JSONFilePath").item(0).getTextContent();
+            path = doc.getDocumentElement().getElementsByTagName(nodeName).item(0).getTextContent();
 
             System.out.println();
 
@@ -35,7 +40,5 @@ public class ReadFile {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        return path;
     }
 }
