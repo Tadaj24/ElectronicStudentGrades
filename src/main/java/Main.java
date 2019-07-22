@@ -7,6 +7,8 @@
 
 import fileManager.JsonManager;
 import gradeSystem.GradeSystem;
+import gradeSystem.users.student.Student;
+import gradeSystem.users.student.StudentImpl;
 import utils.ConsoleManager;
 import utils.Logger;
 import utils.MessageFactory;
@@ -16,12 +18,12 @@ public class Main {
         Logger.logMessage("Uruchomienie aplikacji");
         Logger.printMessage(MessageFactory.WELCOME_MESSAGE.toString());
 
-        GradeSystem gradeSystem = JsonManager.load();
+        JsonManager.load();
         ConsoleManager consoleManager = new ConsoleManager();
 
         do {
             Logger.printMessage(MessageFactory.LOGIN_MESSAGE.toString());
-            gradeSystem.returnListOfUsers();
+            //gradeSystem.returnListOfUsers();
             String s = consoleManager.readConsole();
             System.out.println(s);
         }

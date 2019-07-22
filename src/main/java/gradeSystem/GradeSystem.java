@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 public class GradeSystem {
     List<StudentImpl> studentsList = new ArrayList<>();
-    //List<TeacherImpl> teachersList = new ArrayList<>();
+    List<TeacherImpl> teachersList = new ArrayList<>();
 
     public ArrayList<String> returnListOfUsers(){
         Stream<String> studentsLogins = studentsList
@@ -29,5 +29,14 @@ public class GradeSystem {
                 .sorted()
                 .map(x -> String.format("%s) %s", index.getAndIncrement(), x))
                 .collect(Collectors.toList());
+    }
+
+
+    public List<StudentImpl> getStudentsList() {
+        return studentsList;
+    }
+
+    public List<TeacherImpl> getTeachersList() {
+        return teachersList;
     }
 }

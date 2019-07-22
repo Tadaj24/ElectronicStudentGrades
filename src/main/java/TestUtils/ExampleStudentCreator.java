@@ -1,8 +1,7 @@
-package gradeSystem;
+package TestUtils;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import gradeSystem.GradeSystem;
 import gradeSystem.subjects.Subject;
 import gradeSystem.subjects.SubjectName;
 import gradeSystem.subjects.grades.Grade;
@@ -14,15 +13,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 
-public class Temp {
+public class ExampleStudentCreator {
     public static void main(String[] args) {
         Gson gson = new Gson();
-        List<StudentImpl> students = new ArrayList<>();
-
-        students.add(createStudent("Adam", "Be", "123"));
-        students.add(createStudent("Adamek", "Beadsad", "123"));
-        students.add(createStudent("Adamas", "Beed", "123"));
-
+        List<StudentImpl> students = createExampleStudents();
         Type listOfTestObject = new TypeToken<List<StudentImpl>>(){}.getType();
         String json = gson.toJson(students);
         System.out.println(json);
@@ -31,7 +25,7 @@ public class Temp {
         System.out.println();
     }
 
-    public static List<StudentImpl> getSimpleStudents(){
+    public static List<StudentImpl> createExampleStudents(){
         List<StudentImpl> students = new ArrayList<>();
 
         students.add(createStudent("Blazej", "R", "123"));
