@@ -1,0 +1,181 @@
+{
+  "studentList": [
+    {
+      "subjectsList": [
+        {
+          "subjectName": "Polish",
+          "gradeList": [
+            {
+              "value": -3.0,
+              "weight": "THREE"
+            },
+            {
+              "value": 2.0,
+              "weight": "THREE"
+            },
+            {
+              "value": -3.0,
+              "weight": "THREE"
+            }
+          ]
+        },
+        {
+          "subjectName": "Matematic",
+          "gradeList": [
+            {
+              "value": 6.0,
+              "weight": "ONE"
+            },
+            {
+              "value": -3.0,
+              "weight": "TWO"
+            },
+            {
+              "value": -3.0,
+              "weight": "THREE"
+            }
+          ]
+        },
+        {
+          "subjectName": "History",
+          "gradeList": [
+            {
+              "value": 1.0,
+              "weight": "TWO"
+            },
+            {
+              "value": -4.0,
+              "weight": "ONE"
+            },
+            {
+              "value": -2.0,
+              "weight": "THREE"
+            }
+          ]
+        }
+      ],
+      "firstName": "Adam",
+      "secondName": "Be",
+      "password": "123",
+      "userType": "Student"
+    },
+    {
+      "subjectsList": [
+        {
+          "subjectName": "Polish",
+          "gradeList": [
+            {
+              "value": 1.0,
+              "weight": "THREE"
+            },
+            {
+              "value": 5.0,
+              "weight": "ONE"
+            },
+            {
+              "value": 6.0,
+              "weight": "ONE"
+            }
+          ]
+        },
+        {
+          "subjectName": "Matematic",
+          "gradeList": [
+            {
+              "value": 5.0,
+              "weight": "ONE"
+            },
+            {
+              "value": -2.0,
+              "weight": "ONE"
+            },
+            {
+              "value": 2.0,
+              "weight": "ONE"
+            }
+          ]
+        },
+        {
+          "subjectName": "History",
+          "gradeList": [
+            {
+              "value": 4.0,
+              "weight": "THREE"
+            },
+            {
+              "value": 5.0,
+              "weight": "THREE"
+            },
+            {
+              "value": 4.0,
+              "weight": "ONE"
+            }
+          ]
+        }
+      ],
+      "firstName": "Adamek",
+      "secondName": "Beadsad",
+      "password": "123",
+      "userType": "Student"
+    },
+    {
+      "subjectsList": [
+        {
+          "subjectName": "Polish",
+          "gradeList": [
+            {
+              "value": -1.0,
+              "weight": "ONE"
+            },
+            {
+              "value": -4.0,
+              "weight": "THREE"
+            },
+            {
+              "value": 1.0,
+              "weight": "ONE"
+            }
+          ]
+        },
+        {
+          "subjectName": "Matematic",
+          "gradeList": [
+            {
+              "value": 5.0,
+              "weight": "TWO"
+            },
+            {
+              "value": 6.0,
+              "weight": "THREE"
+            },
+            {
+              "value": 0.0,
+              "weight": "THREE"
+            }
+          ]
+        },
+        {
+          "subjectName": "History",
+          "gradeList": [
+            {
+              "value": -1.0,
+              "weight": "THREE"
+            },
+            {
+              "value": -2.0,
+              "weight": "THREE"
+            },
+            {
+              "value": 5.0,
+              "weight": "THREE"
+            }
+          ]
+        }
+      ],
+      "firstName": "Adamas",
+      "secondName": "Beed",
+      "password": "123",
+      "userType": "Student"
+    }
+  ]
+}
